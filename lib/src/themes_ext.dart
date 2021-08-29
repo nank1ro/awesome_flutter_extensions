@@ -96,7 +96,7 @@ extension Themes on BuildContext {
 }
 
 class _Themes {
-  _Themes({
+  const _Themes({
     required this.button,
     required this.toggleButtons,
     required this.text,

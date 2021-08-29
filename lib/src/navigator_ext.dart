@@ -26,7 +26,7 @@ extension NavigatorX on BuildContext {
 }
 
 class _Navigator {
-  _Navigator({
+  const _Navigator({
     required this.canPop,
     required this.maybePop,
     required this.pop,

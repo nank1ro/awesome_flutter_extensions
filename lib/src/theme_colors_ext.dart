@@ -30,7 +30,7 @@ extension ThemeColors on BuildContext {
         hint: _hintColor,
         error: _errorColor,
         toggleableActive: _toggleableActiveColor,
-        colorScheme: _colorScheme,
+        scheme: _colorScheme,
       );
 
   ThemeData get _theme => Theme.of(this);
@@ -66,7 +66,7 @@ extension ThemeColors on BuildContext {
 /// Helper class that allows to use a color like:
 /// `context.colors.primary`
 class _ThemeColors {
-  _ThemeColors({
+  const _ThemeColors({
     required this.primary,
     required this.primaryLight,
     required this.primaryDark,
@@ -92,7 +92,7 @@ class _ThemeColors {
     required this.hint,
     required this.error,
     required this.toggleableActive,
-    required this.colorScheme,
+    required this.scheme,
   });
 
   /// See [ThemeData.primaryColor].
@@ -171,5 +171,5 @@ class _ThemeColors {
   final Color toggleableActive;
 
   /// See [ThemeData.colorScheme].
-  final ColorScheme colorScheme;
+  final ColorScheme scheme;
 }
