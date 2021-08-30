@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-/// Helper extension that allows to use a text style like:
+/// Helper extension that allows to use a color like:
 /// `context.colors.primary`
 extension ThemeColors on BuildContext {
   /// The list of colors available from the theme
