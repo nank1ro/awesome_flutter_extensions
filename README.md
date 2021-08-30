@@ -38,7 +38,7 @@ import 'package:awesome_flutter_extensions/awesome_flutter_extensions.dart';
 ```
 or
 ```dart
-import 'package:awesome_flutter_extensions/src/all.dart';
+import 'package:awesome_flutter_extensions/all.dart';
 ```
 
 To learn the differences between them, continue reading.
@@ -63,7 +63,7 @@ That's why I decided to split them up.
 Hey, but a library to avoid boilerplate and I have to write so much code?
 If you prefer to have all extensions available directly with the context, import this instead:
 ```dart
-import 'package:awesome_flutter_extensions/src/all.dart';
+import 'package:awesome_flutter_extensions/all.dart';
 ```
 
 
