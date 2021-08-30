@@ -1,4 +1,6 @@
-# awesome_flutter_extensions
+# Awesome Flutter Extensions
+
+<img src="assets/images/header.svg">
 
 Awesome flutter extensions to remove boilerplate
 
@@ -113,6 +115,8 @@ All the extensions available are:
 - viewInsets
 - systemGestureInsets
 - viewPadding
+- devicePixelRatio
+- textScaleFactor
 
 ### TextStyles
 
@@ -276,22 +280,6 @@ All the extensions available are:
 - cupertinoOverride
 
 In the `all.dart` file the names have the `Theme` word after them, expect for _switchTheme_ that is equal.
-
-### MediaQuery
-
-To get the `devicePixelRatio` of the screen, use:
-```dart
-// before
-MediaQuery.of(context).devicePixelRatio
-// after
-context.mediaQuery.devicePixelRatio
-// with the `all.dart` import
-context.devicePixelRatio
-```
-
-All the extensions available are:
-- devicePixelRatio
-- textScaleFactor
 
 ## Contributing
 

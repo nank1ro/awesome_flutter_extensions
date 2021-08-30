@@ -11,10 +11,6 @@ extension Sizes on BuildContext {
         viewInsets: _viewInsets,
         systemGestureInsets: _systemGestureInsets,
         viewPadding: _viewPadding,
-      );
-
-  /// The list of media query available.
-  _MediaQuery get mediaQuery => _MediaQuery(
         devicePixelRatio: _devicePixelRatio,
         textScaleFactor: _textScaleFactor,
       );
@@ -39,6 +35,8 @@ class _Sizes {
     required this.viewInsets,
     required this.systemGestureInsets,
     required this.viewPadding,
+    required this.devicePixelRatio,
+    required this.textScaleFactor,
   });
 
   /// See [Size.width].
@@ -58,13 +56,6 @@ class _Sizes {
 
   /// See [MediaQueryData.viewPadding].
   final EdgeInsets viewPadding;
-}
-
-class _MediaQuery {
-  const _MediaQuery({
-    required this.devicePixelRatio,
-    required this.textScaleFactor,
-  });
 
   /// See [MediaQueryData.devicePixelRatio].
   final double devicePixelRatio;
