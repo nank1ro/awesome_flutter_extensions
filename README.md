@@ -72,11 +72,23 @@ import 'package:awesome_flutter_extensions/src/all.dart';
 To push a page you can use:
 ```dart
 // before
-Navigator.of(context).push(SomePage());
+Navigator.of(context).push<void>(
+    MaterialPageRoute(
+    builder: (context) => const SecondPage(),
+  ),
+);
 // after
-context.navigator.push(SomePage());
+context.navigator.push<void>(
+    MaterialPageRoute(
+    builder: (context) => const SecondPage(),
+  ),
+);
 // with the `all.dart` import
-context.push(SomePage());
+context.push<void>(
+    MaterialPageRoute(
+    builder: (context) => const SecondPage(),
+  ),
+);
 ```
 
 All the extensions available are:
