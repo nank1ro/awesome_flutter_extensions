@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-/// Helper extension that allows to use a text style like:
+/// Helper extension that allows to use a them like:
 /// `context.themes.icon`
 extension Themes on BuildContext {
   /// The list of themes available
@@ -96,7 +96,7 @@ extension Themes on BuildContext {
 }
 
 class _Themes {
-  _Themes({
+  const _Themes({
     required this.button,
     required this.toggleButtons,
     required this.text,

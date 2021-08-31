@@ -28,7 +28,7 @@ extension Sizes on BuildContext {
 }
 
 class _Sizes {
-  _Sizes({
+  const _Sizes({
     required this.width,
     required this.height,
     required this.padding,
@@ -60,6 +60,6 @@ class _Sizes {
   /// See [MediaQueryData.devicePixelRatio].
   final double devicePixelRatio;
 
-  /// See [MediaQueryData.devicePixelRatio].
+  /// See [MediaQueryData.textScaleFactor].
   final double textScaleFactor;
 }

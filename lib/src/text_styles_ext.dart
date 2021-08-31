@@ -39,7 +39,7 @@ extension TextStyles on BuildContext {
 }
 
 class _TextStyles {
-  _TextStyles({
+  const _TextStyles({
     required this.h1,
     required this.h2,
     required this.h3,
@@ -126,4 +126,16 @@ extension FontWeights on TextStyle {
 
   /// Thin, the least thick
   TextStyle get thin => copyWith(fontWeight: FontWeight.w100);
+}
+
+/// Converts in a simple way a textStyle to the desired font style.
+///
+/// Example usage:
+/// `context.textStyles.h1.italic`
+extension FontStyles on TextStyle {
+  /// Use the upright glyphs
+  TextStyle get normal => copyWith(fontStyle: FontStyle.normal);
+
+  /// Use glyphs designed for slanting
+  TextStyle get italic => copyWith(fontStyle: FontStyle.italic);
 }
