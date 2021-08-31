@@ -1,6 +1,6 @@
 # Awesome Flutter Extensions
 
-<img src="assets/images/header.svg">
+<img src="assets/images/header.svg" height="400">
 
 Awesome flutter extensions to remove boilerplate
 
