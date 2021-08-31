@@ -135,7 +135,7 @@ All the extensions available are:
 To get the `headline1` text style use:
 ```dart
 // before
-Theme.of(this).textTheme.headline1!
+Theme.of(context).textTheme.headline1!
 // after
 context.textStyles.h1
 // with the `all.dart` import
