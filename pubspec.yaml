@@ -1,6 +1,8 @@
 name: awesome_flutter_extensions
-description: Awesome flutter extensions to remove boilerplate
-version: 0.0.1+1
+description: >
+  A Flutter Extension to remove boilerplate when accessing
+  ancestor context properties
+version: 0.0.1+2
 homepage: https://bestofcode.dev
 repository: https://github.com/nank1ro/awesome_flutter_extensions
 

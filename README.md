@@ -291,7 +291,7 @@ All the extensions available are:
 - switchTheme
 - cupertinoOverride
 
-In the `all.dart` file the names have the `Theme` word after them, expect for _switchTheme_ that is equal.
+In the `all.dart` file the names have the `Theme` word after them, except for _switchTheme_ that is equal.
 
 ## Contributing
 
