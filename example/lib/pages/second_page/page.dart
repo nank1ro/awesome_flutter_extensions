@@ -10,7 +10,7 @@ class SecondPage extends StatelessWidget {
       appBar: AppBar(
         title: Text(
           'Second page',
-          style: context.textStyles.h6.bold.copyWith(
+          style: context.textStyles.titleLarge.bold.copyWith(
             color: context.colors.scheme.onPrimary,
           ),
         ),

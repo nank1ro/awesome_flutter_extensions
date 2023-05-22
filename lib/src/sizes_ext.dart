@@ -13,18 +13,34 @@ extension Sizes on BuildContext {
         viewPadding: _viewPadding,
         devicePixelRatio: _devicePixelRatio,
         textScaleFactor: _textScaleFactor,
+        maybeDevicePixelRatio: _maybeDevicePixelRatio,
+        maybeHeight: _maybeHeight,
+        maybePadding: _maybePadding,
+        maybeSystemGestureInsets: _maybeSystemGestureInsets,
+        maybeTextScaleFactor: _maybeTextScaleFactor,
+        maybeViewInsets: _maybeViewInsets,
+        maybeViewPadding: _maybeViewPadding,
+        maybeWidth: _maybeWidth,
       );
 
-  MediaQueryData get _mediaQuery => MediaQuery.of(this);
-
-  double get _width => _mediaQuery.size.width;
-  double get _height => _mediaQuery.size.height;
-  EdgeInsets get _padding => _mediaQuery.padding;
-  EdgeInsets get _viewInsets => _mediaQuery.viewInsets;
-  EdgeInsets get _systemGestureInsets => _mediaQuery.systemGestureInsets;
-  EdgeInsets get _viewPadding => _mediaQuery.viewPadding;
-  double get _devicePixelRatio => _mediaQuery.devicePixelRatio;
-  double get _textScaleFactor => _mediaQuery.textScaleFactor;
+  double get _width => MediaQuery.sizeOf(this).width;
+  double? get _maybeWidth => MediaQuery.maybeSizeOf(this)?.width;
+  double get _height => MediaQuery.sizeOf(this).height;
+  double? get _maybeHeight => MediaQuery.maybeSizeOf(this)?.height;
+  EdgeInsets get _padding => MediaQuery.paddingOf(this);
+  EdgeInsets? get _maybePadding => MediaQuery.maybePaddingOf(this);
+  EdgeInsets get _viewInsets => MediaQuery.viewInsetsOf(this);
+  EdgeInsets? get _maybeViewInsets => MediaQuery.maybeViewInsetsOf(this);
+  EdgeInsets get _systemGestureInsets => MediaQuery.systemGestureInsetsOf(this);
+  EdgeInsets? get _maybeSystemGestureInsets =>
+      MediaQuery.maybeSystemGestureInsetsOf(this);
+  EdgeInsets get _viewPadding => MediaQuery.viewPaddingOf(this);
+  EdgeInsets? get _maybeViewPadding => MediaQuery.maybeViewPaddingOf(this);
+  double get _devicePixelRatio => MediaQuery.devicePixelRatioOf(this);
+  double? get _maybeDevicePixelRatio =>
+      MediaQuery.maybeDevicePixelRatioOf(this);
+  double get _textScaleFactor => MediaQuery.textScaleFactorOf(this);
+  double? get _maybeTextScaleFactor => MediaQuery.maybeTextScaleFactorOf(this);
 }
 
 class _Sizes {
@@ -37,29 +53,86 @@ class _Sizes {
     required this.viewPadding,
     required this.devicePixelRatio,
     required this.textScaleFactor,
+    required this.maybeWidth,
+    required this.maybeHeight,
+    required this.maybePadding,
+    required this.maybeViewInsets,
+    required this.maybeSystemGestureInsets,
+    required this.maybeViewPadding,
+    required this.maybeDevicePixelRatio,
+    required this.maybeTextScaleFactor,
   });
 
   /// See [Size.width].
   final double width;
 
+  /// See [Size.width].
+  final double? maybeWidth;
+
   /// See [Size.height].
   final double height;
+
+  /// See [Size.height].
+  final double? maybeHeight;
 
   /// See [MediaQueryData.padding].
   final EdgeInsets padding;
 
+  /// See [MediaQueryData.padding].
+  final EdgeInsets? maybePadding;
+
   /// See [MediaQueryData.viewInsets].
   final EdgeInsets viewInsets;
+
+  /// See [MediaQueryData.viewInsets].
+  final EdgeInsets? maybeViewInsets;
 
   /// See [MediaQueryData.systemGestureInsets].
   final EdgeInsets systemGestureInsets;
 
+  /// See [MediaQueryData.systemGestureInsets].
+  final EdgeInsets? maybeSystemGestureInsets;
+
   /// See [MediaQueryData.viewPadding].
   final EdgeInsets viewPadding;
+
+  /// See [MediaQueryData.viewPadding].
+  final EdgeInsets? maybeViewPadding;
 
   /// See [MediaQueryData.devicePixelRatio].
   final double devicePixelRatio;
 
+  /// See [MediaQueryData.devicePixelRatio].
+  final double? maybeDevicePixelRatio;
+
   /// See [MediaQueryData.textScaleFactor].
   final double textScaleFactor;
+
+  /// See [MediaQueryData.textScaleFactor].
+  final double? maybeTextScaleFactor;
+}
+
+/// Converts a [num] into an [EdgeInsets]
+extension PaddingNum on num {
+  /// Creates insets where all the offsets are `value`.
+  EdgeInsets all() => EdgeInsets.all(toDouble());
+
+  /// Creates insets with symmetric horizontal offsets.
+  EdgeInsets horizontal() => EdgeInsets.symmetric(horizontal: toDouble());
+
+  /// Creates insets with symmetric vertical offsets.
+  EdgeInsets vertical() => EdgeInsets.symmetric(vertical: toDouble());
+
+  /// Creates insets with only the top value.
+  EdgeInsets top() => EdgeInsets.only(top: toDouble());
+
+  /// Creates insets with only the left value.
+
+  EdgeInsets left() => EdgeInsets.only(left: toDouble());
+
+  /// Creates insets with only the right value.
+  EdgeInsets right() => EdgeInsets.only(right: toDouble());
+
+  /// Creates insets with only the bottom value.
+  EdgeInsets bottom() => EdgeInsets.only(bottom: toDouble());
 }

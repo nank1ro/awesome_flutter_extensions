@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 /// Helper extension that allows to use a text style like:
@@ -6,93 +5,105 @@ import 'package:flutter/material.dart';
 extension TextStyles on BuildContext {
   /// The list of text styles available to the app
   _TextStyles get textStyles => _TextStyles(
-        h1: _h1,
-        h2: _h2,
-        h3: _h3,
-        h4: _h4,
-        h5: _h5,
-        h6: _h6,
-        bodyText1: _bodyText1,
-        bodyText2: _bodyText2,
-        caption: _caption,
-        button: _button,
-        subtitle1: _subtitle1,
-        subtitle2: _subtitle2,
-        overline: _overline,
+        displayLarge: _displayLarge,
+        displayMedium: _displayMedium,
+        displaySmall: _displaySmall,
+        headlineLarge: _headlineLarge,
+        headlineMedium: _headlineMedium,
+        headlineSmall: _headlineSmall,
+        titleLarge: _titleLarge,
+        titleMedium: _titleMedium,
+        titleSmall: _titleSmall,
+        bodyLarge: _bodyLarge,
+        bodyMedium: _bodyMedium,
+        bodySmall: _bodySmall,
+        labelLarge: _labelLarge,
+        labelMedium: _labelMedium,
+        labelSmall: _labelSmall,
       );
 
   TextTheme get _textTheme => Theme.of(this).textTheme;
 
-  TextStyle get _h1 => _textTheme.headline1!;
-  TextStyle get _h2 => _textTheme.headline2!;
-  TextStyle get _h3 => _textTheme.headline3!;
-  TextStyle get _h4 => _textTheme.headline4!;
-  TextStyle get _h5 => _textTheme.headline5!;
-  TextStyle get _h6 => _textTheme.headline6!;
-  TextStyle get _bodyText1 => _textTheme.bodyText1!;
-  TextStyle get _bodyText2 => _textTheme.bodyText2!;
-  TextStyle get _caption => _textTheme.caption!;
-  TextStyle get _button => _textTheme.button!;
-  TextStyle get _subtitle1 => _textTheme.subtitle1!;
-  TextStyle get _subtitle2 => _textTheme.subtitle2!;
-  TextStyle get _overline => _textTheme.overline!;
+  TextStyle get _displayLarge => _textTheme.displayLarge!;
+  TextStyle get _displayMedium => _textTheme.displayMedium!;
+  TextStyle get _displaySmall => _textTheme.displaySmall!;
+  TextStyle get _headlineLarge => _textTheme.headlineLarge!;
+  TextStyle get _headlineMedium => _textTheme.headlineMedium!;
+  TextStyle get _headlineSmall => _textTheme.headlineSmall!;
+  TextStyle get _titleLarge => _textTheme.titleLarge!;
+  TextStyle get _titleMedium => _textTheme.titleMedium!;
+  TextStyle get _titleSmall => _textTheme.titleSmall!;
+  TextStyle get _bodyLarge => _textTheme.bodyLarge!;
+  TextStyle get _bodyMedium => _textTheme.bodyMedium!;
+  TextStyle get _bodySmall => _textTheme.bodySmall!;
+  TextStyle get _labelLarge => _textTheme.labelLarge!;
+  TextStyle get _labelMedium => _textTheme.labelMedium!;
+  TextStyle get _labelSmall => _textTheme.labelSmall!;
 }
 
 class _TextStyles {
   const _TextStyles({
-    required this.h1,
-    required this.h2,
-    required this.h3,
-    required this.h4,
-    required this.h5,
-    required this.h6,
-    required this.bodyText1,
-    required this.bodyText2,
-    required this.caption,
-    required this.button,
-    required this.overline,
-    required this.subtitle1,
-    required this.subtitle2,
+    required this.displayLarge,
+    required this.displayMedium,
+    required this.displaySmall,
+    required this.headlineLarge,
+    required this.headlineMedium,
+    required this.headlineSmall,
+    required this.titleLarge,
+    required this.titleMedium,
+    required this.titleSmall,
+    required this.bodyLarge,
+    required this.bodyMedium,
+    required this.bodySmall,
+    required this.labelLarge,
+    required this.labelMedium,
+    required this.labelSmall,
   });
 
-  /// See [TextTheme.headline1].
-  final TextStyle h1;
+  /// See [TextTheme.displayLarge].
+  final TextStyle displayLarge;
 
-  /// See [TextTheme.headline2].
-  final TextStyle h2;
+  /// See [TextTheme.displayMedium].
+  final TextStyle displayMedium;
 
-  /// See [TextTheme.headline3].
-  final TextStyle h3;
+  /// See [TextTheme.displaySmall].
+  final TextStyle displaySmall;
 
-  /// See [TextTheme.headline4].
-  final TextStyle h4;
+  /// See [TextTheme.headlineLarge].
+  final TextStyle headlineLarge;
 
-  /// See [TextTheme.headline5].
-  final TextStyle h5;
+  /// See [TextTheme.headlineMedium].
+  final TextStyle headlineMedium;
 
-  /// See [TextTheme.headline6].
-  final TextStyle h6;
+  /// See [TextTheme.headlineSmall].
+  final TextStyle headlineSmall;
 
-  /// See [TextTheme.bodyText1].
-  final TextStyle bodyText1;
+  /// See [TextTheme.titleLarge].
+  final TextStyle titleLarge;
 
-  /// See [TextTheme.bodyText2].
-  final TextStyle bodyText2;
+  /// See [TextTheme.titleMedium].
+  final TextStyle titleMedium;
 
-  /// See [TextTheme.caption].
-  final TextStyle caption;
+  /// See [TextTheme.titleSmall].
+  final TextStyle titleSmall;
 
-  /// See [TextTheme.button].
-  final TextStyle button;
+  /// See [TextTheme.bodyLarge].
+  final TextStyle bodyLarge;
 
-  /// See [TextTheme.overline].
-  final TextStyle overline;
+  /// See [TextTheme.bodyMedium].
+  final TextStyle bodyMedium;
 
-  /// See [TextTheme.subtitle1].
-  final TextStyle subtitle1;
+  /// See [TextTheme.bodySmall].
+  final TextStyle bodySmall;
 
-  /// See [TextTheme.subtitle2].
-  final TextStyle subtitle2;
+  /// See [TextTheme.labelLarge].
+  final TextStyle labelLarge;
+
+  /// See [TextTheme.labelMedium].
+  final TextStyle labelMedium;
+
+  /// See [TextTheme.labelSmall].
+  final TextStyle labelSmall;
 }
 
 /// Converts in a simple way a textStyle to the desired font weight.
