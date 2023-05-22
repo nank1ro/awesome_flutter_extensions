@@ -49,6 +49,15 @@ extension DurationExt on num {
   /// Converts the number into a [Duration] in days
   Duration get days => Duration(days: round());
 
+  /// Converts the number into a [Duration] in months
+  Duration get months => Duration(days: 30 * round());
+
+  /// Converts the number into a [Duration] in quarters
+  Duration get quarters => Duration(days: 90 * round());
+
+  /// Converts the number into a [Duration] in quadrimesters
+  Duration get quadrimesters => Duration(days: 120 * round());
+
   /// Converts the number into a [Duration] in years
   Duration get years => Duration(days: 365 * round());
 }

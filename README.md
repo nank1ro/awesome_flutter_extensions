@@ -441,6 +441,9 @@ All available extensions are:
 - minutes
 - hours
 - days
+- months
+- quarters
+- quadrimesters
 - years
 
 #### Future delayed
