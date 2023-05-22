@@ -1,13 +1,19 @@
+// ignore_for_file: avoid_print
+
 import 'package:awesome_flutter_extensions/awesome_flutter_extensions.dart';
 import 'package:example/pages/second_page/page.dart';
 import 'package:flutter/material.dart';
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  const MyHomePage({
+    required this.title,
+    Key? key,
+  }) : super(key: key);
 
   final String title;
 
   @override
+  // ignore: library_private_types_in_public_api
   _MyHomePageState createState() => _MyHomePageState();
 }
 
@@ -22,11 +28,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final isLightMode = context.isLightMode;
+    final isDarkMode = context.isDarkMode;
+    print('isLightMode: $isLightMode');
+    print('isDarkMode: $isDarkMode');
     return Scaffold(
       appBar: AppBar(
         title: Text(
           widget.title,
-          style: context.textStyles.h6.bold.copyWith(
+          style: context.textStyles.titleLarge.bold.copyWith(
             color: context.colors.scheme.onPrimary,
           ),
         ),
@@ -37,22 +47,18 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
-              style: context.textStyles.bodyText1.extraBold.italic,
+              style: context.textStyles.bodyLarge.extraBold.italic,
             ),
             Text(
               '$_counter',
-              style: context.textStyles.h4.medium,
+              style: context.textStyles.headlineMedium.medium,
             ),
             const SizedBox(
               height: 20,
             ),
             ElevatedButton(
               onPressed: () {
-                context.navigator.push<void>(
-                  MaterialPageRoute(
-                    builder: (context) => const SecondPage(),
-                  ),
-                );
+                context.navigator.pushMaterial(const SecondPage());
               },
               child: const Text('Go to second page'),
             ),

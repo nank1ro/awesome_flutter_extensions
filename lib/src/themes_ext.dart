@@ -10,11 +10,9 @@ extension Themes on BuildContext {
         toggleButtons: _toggleButtonsTheme,
         text: _textTheme,
         primaryText: _primaryTextTheme,
-        accentText: _accentTextTheme,
         inputDecoration: _inputDecorationTheme,
         icon: _iconTheme,
         primaryIcon: _primaryIconTheme,
-        accentIcon: _accentIconTheme,
         slider: _sliderTheme,
         tabBar: _tabBarTheme,
         tooltip: _tooltipTheme,
@@ -43,6 +41,22 @@ extension Themes on BuildContext {
         checkbox: _checkboxTheme,
         radio: _radioTheme,
         switchTheme: _switchTheme,
+        badge: _badgeTheme,
+        drawer: _drawerTheme,
+        dropdownMenu: _dropdownMenuTheme,
+        expansionTile: _expansionTileTheme,
+        extensions: _extensions,
+        filledButton: _filledButtonTheme,
+        iconButton: _iconButtonTheme,
+        listTile: _listTileTheme,
+        menu: _menuTheme,
+        menuBar: _menuBarTheme,
+        menuButton: _menuButtonTheme,
+        navigationBar: _navigationBarTheme,
+        navigationDrawer: _navigationDrawerTheme,
+        pageTransitions: _pageTransitionsTheme,
+        progressIndicator: _progressIndicatorTheme,
+        segmentedButton: _segmentedButtonTheme,
       );
 
   ThemeData get _themeData => Theme.of(this);
@@ -52,12 +66,10 @@ extension Themes on BuildContext {
   ToggleButtonsThemeData get _toggleButtonsTheme =>
       _themeData.toggleButtonsTheme;
   TextTheme get _primaryTextTheme => _themeData.primaryTextTheme;
-  TextTheme get _accentTextTheme => _themeData.accentTextTheme;
   IconThemeData get _iconTheme => _themeData.iconTheme;
   InputDecorationTheme get _inputDecorationTheme =>
       _themeData.inputDecorationTheme;
   IconThemeData get _primaryIconTheme => _themeData.primaryIconTheme;
-  IconThemeData get _accentIconTheme => _themeData.accentIconTheme;
   SliderThemeData get _sliderTheme => _themeData.sliderTheme;
   TabBarTheme get _tabBarTheme => _themeData.tabBarTheme;
   TooltipThemeData get _tooltipTheme => _themeData.tooltipTheme;
@@ -93,6 +105,28 @@ extension Themes on BuildContext {
   CheckboxThemeData get _checkboxTheme => _themeData.checkboxTheme;
   RadioThemeData get _radioTheme => _themeData.radioTheme;
   SwitchThemeData get _switchTheme => _themeData.switchTheme;
+  BadgeThemeData get _badgeTheme => _themeData.badgeTheme;
+  DrawerThemeData get _drawerTheme => _themeData.drawerTheme;
+  DropdownMenuThemeData get _dropdownMenuTheme => _themeData.dropdownMenuTheme;
+  ExpansionTileThemeData get _expansionTileTheme =>
+      _themeData.expansionTileTheme;
+  Map<Object, ThemeExtension<dynamic>> get _extensions => _themeData.extensions;
+  FilledButtonThemeData get _filledButtonTheme => _themeData.filledButtonTheme;
+  IconButtonThemeData get _iconButtonTheme => _themeData.iconButtonTheme;
+  ListTileThemeData get _listTileTheme => _themeData.listTileTheme;
+  MenuThemeData get _menuTheme => _themeData.menuTheme;
+  MenuBarThemeData get _menuBarTheme => _themeData.menuBarTheme;
+  MenuButtonThemeData get _menuButtonTheme => _themeData.menuButtonTheme;
+  NavigationBarThemeData get _navigationBarTheme =>
+      _themeData.navigationBarTheme;
+  NavigationDrawerThemeData get _navigationDrawerTheme =>
+      _themeData.navigationDrawerTheme;
+  PageTransitionsTheme get _pageTransitionsTheme =>
+      _themeData.pageTransitionsTheme;
+  ProgressIndicatorThemeData get _progressIndicatorTheme =>
+      _themeData.progressIndicatorTheme;
+  SegmentedButtonThemeData get _segmentedButtonTheme =>
+      _themeData.segmentedButtonTheme;
 }
 
 class _Themes {
@@ -101,11 +135,9 @@ class _Themes {
     required this.toggleButtons,
     required this.text,
     required this.primaryText,
-    required this.accentText,
     required this.inputDecoration,
     required this.icon,
     required this.primaryIcon,
-    required this.accentIcon,
     required this.slider,
     required this.tabBar,
     required this.tooltip,
@@ -133,7 +165,23 @@ class _Themes {
     required this.checkbox,
     required this.radio,
     required this.switchTheme,
-    this.cupertinoOverride,
+    required this.cupertinoOverride,
+    required this.pageTransitions,
+    required this.extensions,
+    required this.badge,
+    required this.drawer,
+    required this.dropdownMenu,
+    required this.expansionTile,
+    required this.filledButton,
+    required this.iconButton,
+    required this.listTile,
+    required this.menuBar,
+    required this.menuButton,
+    required this.menu,
+    required this.navigationBar,
+    required this.navigationDrawer,
+    required this.progressIndicator,
+    required this.segmentedButton,
   });
 
   /// See [ThemeData.buttonTheme].
@@ -148,9 +196,6 @@ class _Themes {
   /// See [ThemeData.primaryTextTheme].
   final TextTheme primaryText;
 
-  /// See [ThemeData.accentTextTheme].
-  final TextTheme accentText;
-
   /// See [ThemeData.inputDecorationTheme].
   final InputDecorationTheme inputDecoration;
 
@@ -159,9 +204,6 @@ class _Themes {
 
   /// See [ThemeData.primaryIconTheme].
   final IconThemeData primaryIcon;
-
-  /// See [ThemeData.accentIconTheme].
-  final IconThemeData accentIcon;
 
   /// See [ThemeData.sliderTheme].
   final SliderThemeData slider;
@@ -246,4 +288,61 @@ class _Themes {
 
   /// See [ThemeData.switchTheme].
   final SwitchThemeData switchTheme;
+
+  /// See [ThemeData.pageTransitionsTheme].
+  final PageTransitionsTheme pageTransitions;
+
+  /// See [ThemeData.extensions].
+  final Map<Object, ThemeExtension<dynamic>> extensions;
+
+  /// See [ThemeData.badgeTheme].
+  final BadgeThemeData badge;
+
+  /// See [ThemeData.drawerTheme].
+  final DrawerThemeData drawer;
+
+  /// See [ThemeData.dropdownMenuTheme].
+  final DropdownMenuThemeData dropdownMenu;
+
+  /// See [ThemeData.expansionTileTheme].
+  final ExpansionTileThemeData expansionTile;
+
+  /// See [ThemeData.filledButtonTheme].
+  final FilledButtonThemeData filledButton;
+
+  /// See [ThemeData.iconButtonTheme].
+  final IconButtonThemeData iconButton;
+
+  /// See [ThemeData.listTileTheme].
+  final ListTileThemeData listTile;
+
+  /// See [ThemeData.menuBarTheme].
+  final MenuBarThemeData menuBar;
+
+  /// See [ThemeData.menuButtonTheme].
+  final MenuButtonThemeData menuButton;
+
+  /// See [ThemeData.menuTheme].
+  final MenuThemeData menu;
+
+  /// See [ThemeData.navigationBarTheme].
+  final NavigationBarThemeData navigationBar;
+
+  /// See [ThemeData.navigationDrawerTheme].
+  final NavigationDrawerThemeData navigationDrawer;
+
+  /// See [ThemeData.progressIndicatorTheme].
+  final ProgressIndicatorThemeData progressIndicator;
+
+  /// See [ThemeData.segmentedButtonTheme].
+  final SegmentedButtonThemeData segmentedButton;
+}
+
+/// Theme mode extensions
+extension ThemeModeExt on BuildContext {
+  /// Indicates wheter the app is in dark mode
+  bool get isDarkMode => Theme.of(this).brightness == Brightness.dark;
+
+  /// Indicates wheter the app is in light mode
+  bool get isLightMode => Theme.of(this).brightness == Brightness.light;
 }
