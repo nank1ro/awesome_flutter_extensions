@@ -17,15 +17,18 @@ extension DevTools on Object {
 /// Allows to insert a separator between the items of the iterable.
 extension SeparatedIterable on Iterable<Widget> {
   /// Allows to insert a [separator] between the items of the iterable.
-  Iterable<Widget> separatedBy(Widget separator) sync* {
+  List<Widget> separatedBy(Widget separator) {
+    final result = <Widget>[];
     final iterator = this.iterator;
     if (iterator.moveNext()) {
-      yield iterator.current;
+      result.add(iterator.current);
       while (iterator.moveNext()) {
-        yield separator;
-        yield iterator.current;
+        result
+          ..add(separator)
+          ..add(iterator.current);
       }
     }
+    return result;
   }
 }
 
