@@ -92,20 +92,19 @@ You can also add padding easily
 ```dart
 // before
 Padding(padding: EdgeInsets.symmetric(horizontal: 16))
-),
 // now
-Padding(padding: 16.horizontal())
+Padding(padding: 16.paddingHorizontal())
 ```
 
 All the edge insets available are:
 
-- all
-- horizontal
-- vertical
-- top
-- left
-- right
-- bottom
+- paddingAll
+- paddingHorizontal
+- paddingVertical
+- paddingTop
+- paddingLeft
+- paddingRight
+- paddingBottom
 
 ### TextStyles
 

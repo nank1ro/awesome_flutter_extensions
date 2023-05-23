@@ -115,24 +115,24 @@ class _Sizes {
 /// Converts a [num] into an [EdgeInsets]
 extension PaddingNum on num {
   /// Creates insets where all the offsets are `value`.
-  EdgeInsets all() => EdgeInsets.all(toDouble());
+  EdgeInsets paddingAll() => EdgeInsets.all(toDouble());
 
   /// Creates insets with symmetric horizontal offsets.
-  EdgeInsets horizontal() => EdgeInsets.symmetric(horizontal: toDouble());
+  EdgeInsets paddingHorizontal() =>
+      EdgeInsets.symmetric(horizontal: toDouble());
 
   /// Creates insets with symmetric vertical offsets.
-  EdgeInsets vertical() => EdgeInsets.symmetric(vertical: toDouble());
+  EdgeInsets paddingVertical() => EdgeInsets.symmetric(vertical: toDouble());
 
   /// Creates insets with only the top value.
-  EdgeInsets top() => EdgeInsets.only(top: toDouble());
+  EdgeInsets paddingTop() => EdgeInsets.only(top: toDouble());
 
   /// Creates insets with only the left value.
-
-  EdgeInsets left() => EdgeInsets.only(left: toDouble());
+  EdgeInsets paddingLeft() => EdgeInsets.only(left: toDouble());
 
   /// Creates insets with only the right value.
-  EdgeInsets right() => EdgeInsets.only(right: toDouble());
+  EdgeInsets paddingRight() => EdgeInsets.only(right: toDouble());
 
   /// Creates insets with only the bottom value.
-  EdgeInsets bottom() => EdgeInsets.only(bottom: toDouble());
+  EdgeInsets paddingBottom() => EdgeInsets.only(bottom: toDouble());
 }

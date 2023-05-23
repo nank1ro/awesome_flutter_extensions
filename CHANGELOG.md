@@ -1,3 +1,7 @@
+## 1.1.0
+
+- Rename `horizontal` to `paddingHorizontal` and so on
+
 ## 1.0.0+1
 
 - Update README
