@@ -3,12 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
-  // object not if they have the same value. The Text widgets in the expected
-  // list and in the actual list are different instances,
-  // so they are not equal even if their properties are the same.
-  // The way to solve this issue is to compare the data of the widgets, not the
-  // widgets themselves. You can do this by creating a helper function that checks
-  //if two widgets have the same type and data:
+  // There's no built-in way to check if two Text widgets are equal, as the
+  // equality operator (==) compares whether two references point to the same
+  // object, rather than if they have equivalent properties. However, you can
+  // simplify the process by creating a matcher that checks the data of Text
+  // widgets.
   bool areWidgetsEqual(Widget widget1, Widget widget2) {
     if (widget1.runtimeType != widget2.runtimeType) {
       return false;
