@@ -1,5 +1,5 @@
 import 'package:awesome_flutter_extensions/src/miscellaneous_ext.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
@@ -85,8 +85,8 @@ bool areWidgetsEqual(Widget widget1, Widget widget2) {
     return false;
   }
 
-  if (widget1 is Text) {
-    return (widget1.data == (widget2 as Text).data);
+  if (widget1 is Text && widget2 is Text) {
+    return (widget1.data == widget2.data);
   } else if (widget1 is SizedBox) {
     return (widget1.height == (widget2 as SizedBox).height);
   }
