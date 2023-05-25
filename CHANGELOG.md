@@ -1,3 +1,7 @@
+## 1.1.1
+
+- `.separatedBy()` now returns a list by default.
+
 ## 1.1.0
 
 - Rename `horizontal` to `paddingHorizontal` and so on
