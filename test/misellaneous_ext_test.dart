@@ -1,7 +1,30 @@
 import 'package:awesome_flutter_extensions/src/miscellaneous_ext.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  // Dart's equality operator (==) tests whether two references are to the same
+  // object, not if they have the same value. The Text widgets in the expected
+  // list and in the actual list are different instances, so they are not equal
+  // even if their properties are the same. The way to solve this issue is to
+  // compare the data of the widgets, not the widgets themselves. You can do
+  // this by creating a helper function that checks if two widgets have the same
+  // type and data. If they do, then they are equal.
+
+  bool areWidgetsEqual(Widget widget1, Widget widget2) {
+    if (widget1.runtimeType != widget2.runtimeType) {
+      return false;
+    }
+
+    if (widget1 is Text && widget2 is Text) {
+      return (widget1.data == widget2.data);
+    } else if (widget1 is SizedBox && widget2 is SizedBox) {
+      return (widget1.height == widget2.height);
+    }
+
+    return false;
+  }
+
   group('misellaneous_ext_test -', () {
     test('num to Duration', () {
       final dur1 = 1000.milliseconds;
@@ -29,5 +52,40 @@ void main() {
       final dur = 1.seconds;
       expect(dur.future(), isA<Future<dynamic>>());
     });
+
+    test(
+      'SeparatedIterable.separatedBy inserts separator',
+      () {
+        // Create a list of widgets
+        final widgets = <Widget>[
+          const Text('1'),
+          const Text('2'),
+          const Text('3')
+        ];
+
+        //Create a separator widget
+        const Widget separator = SizedBox(height: 8);
+
+        // Separate the widgets by the separator
+        final separatedList = widgets.separatedBy(separator);
+
+        final expectedResult = <Widget>[
+          const Text('1'),
+          const SizedBox(height: 8),
+          const Text('2'),
+          const SizedBox(height: 8),
+          const Text('3'),
+        ];
+
+        expect(separatedList.length, expectedResult.length);
+
+        for (var i = 0; i < separatedList.length; i++) {
+          expect(
+            areWidgetsEqual(separatedList[i], expectedResult[i]),
+            isTrue,
+          );
+        }
+      },
+    );
   });
 }
