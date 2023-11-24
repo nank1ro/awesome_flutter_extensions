@@ -84,8 +84,8 @@ All the extensions available are:
 - maybeViewPadding
 - devicePixelRatio
 - maybeDevicePixelRatio
-- textScaleFactor
-- maybeTextScaleFactor
+- textScaler
+- maybeTextScaler
 
 You can also add padding easily
 
