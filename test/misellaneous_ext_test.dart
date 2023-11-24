@@ -60,7 +60,7 @@ void main() {
         final widgets = <Widget>[
           const Text('1'),
           const Text('2'),
-          const Text('3')
+          const Text('3'),
         ];
 
         //Create a separator widget
