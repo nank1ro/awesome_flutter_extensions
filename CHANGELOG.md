@@ -1,3 +1,7 @@
+## 1.1.2
+
+- **BREAKING** Remove the deprecated `textScaleFactor` in favor of `textScaler`.
+
 ## 1.1.1
 
 - `.separatedBy()` now returns a list by default.

@@ -12,12 +12,12 @@ extension Sizes on BuildContext {
         systemGestureInsets: _systemGestureInsets,
         viewPadding: _viewPadding,
         devicePixelRatio: _devicePixelRatio,
-        textScaleFactor: _textScaleFactor,
+        textScaler: _textScaler,
         maybeDevicePixelRatio: _maybeDevicePixelRatio,
         maybeHeight: _maybeHeight,
         maybePadding: _maybePadding,
         maybeSystemGestureInsets: _maybeSystemGestureInsets,
-        maybeTextScaleFactor: _maybeTextScaleFactor,
+        maybeTextScaler: _maybeTextScaler,
         maybeViewInsets: _maybeViewInsets,
         maybeViewPadding: _maybeViewPadding,
         maybeWidth: _maybeWidth,
@@ -39,8 +39,8 @@ extension Sizes on BuildContext {
   double get _devicePixelRatio => MediaQuery.devicePixelRatioOf(this);
   double? get _maybeDevicePixelRatio =>
       MediaQuery.maybeDevicePixelRatioOf(this);
-  double get _textScaleFactor => MediaQuery.textScaleFactorOf(this);
-  double? get _maybeTextScaleFactor => MediaQuery.maybeTextScaleFactorOf(this);
+  TextScaler get _textScaler => MediaQuery.textScalerOf(this);
+  TextScaler? get _maybeTextScaler => MediaQuery.maybeTextScalerOf(this);
 }
 
 class _Sizes {
@@ -52,7 +52,7 @@ class _Sizes {
     required this.systemGestureInsets,
     required this.viewPadding,
     required this.devicePixelRatio,
-    required this.textScaleFactor,
+    required this.textScaler,
     required this.maybeWidth,
     required this.maybeHeight,
     required this.maybePadding,
@@ -60,7 +60,7 @@ class _Sizes {
     required this.maybeSystemGestureInsets,
     required this.maybeViewPadding,
     required this.maybeDevicePixelRatio,
-    required this.maybeTextScaleFactor,
+    required this.maybeTextScaler,
   });
 
   /// See [Size.width].
@@ -105,11 +105,11 @@ class _Sizes {
   /// See [MediaQueryData.devicePixelRatio].
   final double? maybeDevicePixelRatio;
 
-  /// See [MediaQueryData.textScaleFactor].
-  final double textScaleFactor;
+  /// See [MediaQueryData.textScaler].
+  final TextScaler textScaler;
 
-  /// See [MediaQueryData.textScaleFactor].
-  final double? maybeTextScaleFactor;
+  /// See [MediaQueryData.textScaler].
+  final TextScaler? maybeTextScaler;
 }
 
 /// Converts a [num] into an [EdgeInsets]
