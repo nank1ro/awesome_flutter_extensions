@@ -136,3 +136,12 @@ extension PaddingNum on num {
   /// Creates insets with only the bottom value.
   EdgeInsets paddingBottom() => EdgeInsets.only(bottom: toDouble());
 }
+
+/// Converts a [num] into a [SizedBox]
+extension Space on num {
+  /// Creates sizedbox with width.
+  SizedBox get horizontalSpace => SizedBox(width: toDouble());
+
+  /// Creates sizedbox with height.
+  SizedBox get verticalSpace => SizedBox(height: toDouble());
+}

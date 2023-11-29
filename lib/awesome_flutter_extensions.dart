@@ -3,6 +3,7 @@ library awesome_flutter_extensions;
 
 export 'src/miscellaneous_ext.dart';
 export 'src/navigator_ext.dart';
+export 'src/num_ext.dart';
 export 'src/platform_ext.dart';
 export 'src/sizes_ext.dart';
 export 'src/string_ext.dart';
