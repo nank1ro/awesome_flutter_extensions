@@ -1,3 +1,7 @@
+## 1.2.0
+
+- **FEAT**: Add `ordinal`, `roman` and space extensions (thanks to @athishaves)
+
 ## 1.1.2
 
 - **BREAKING** Remove the deprecated `textScaleFactor` in favor of `textScaler`.

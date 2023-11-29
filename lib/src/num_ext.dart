@@ -23,10 +23,10 @@ extension IntExt on int {
 
   /// Returns roman number representation of [int] from 1 to 3999
   /// ``` dart
-  /// print(12.toRoman); // XII
-  /// print(455.toRoman); // CDLV
-  /// print(1.toRoman); // I
-  /// print(3999.toRoman); // MMMCMXCIX
+  /// print(12.roman); // XII
+  /// print(455.roman); // CDLV
+  /// print(1.roman); // I
+  /// print(3999.roman); // MMMCMXCIX
   /// ```
   String get roman {
     if (this < 1 || this > 3999) {
