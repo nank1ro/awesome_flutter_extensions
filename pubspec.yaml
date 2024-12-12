@@ -2,13 +2,13 @@ name: awesome_flutter_extensions
 description: >
   A Flutter Extension to remove boilerplate when accessing
   ancestor context properties
-version: 1.2.0
-homepage: https://bestofcode.dev
+version: 1.3.0
+homepage: https://mariuti.com
 repository: https://github.com/nank1ro/awesome_flutter_extensions
 
 environment:
   sdk: ^3.0.0
-  flutter: ">=1.17.0"
+  flutter: ">=3.27.0"
 
 dependencies:
   flutter:
@@ -18,5 +18,3 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   very_good_analysis: ^4.0.0+1
-
-flutter: null

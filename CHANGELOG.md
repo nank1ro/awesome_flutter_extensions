@@ -1,3 +1,7 @@
+## 1.3.0
+
+- **FIX**: Breaking changes introduced by Flutter 3.27.0
+
 ## 1.2.0
 
 - **FEAT**: Add `ordinal`, `roman` and space extensions (thanks to @athishaves)

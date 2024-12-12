@@ -30,7 +30,6 @@ extension Themes on BuildContext {
         popupMenu: _popupMenuTheme,
         banner: _bannerTheme,
         divider: _dividerTheme,
-        buttonBar: _buttonBarTheme,
         bottomNavigationBar: _bottomNavigationBarTheme,
         timePicker: _timePickerTheme,
         textButton: _textButtonTheme,
@@ -71,14 +70,14 @@ extension Themes on BuildContext {
       _themeData.inputDecorationTheme;
   IconThemeData get _primaryIconTheme => _themeData.primaryIconTheme;
   SliderThemeData get _sliderTheme => _themeData.sliderTheme;
-  TabBarTheme get _tabBarTheme => _themeData.tabBarTheme;
+  TabBarThemeData get _tabBarTheme => _themeData.tabBarTheme;
   TooltipThemeData get _tooltipTheme => _themeData.tooltipTheme;
-  CardTheme get _cardTheme => _themeData.cardTheme;
+  CardThemeData get _cardTheme => _themeData.cardTheme;
   ChipThemeData get _chipTheme => _themeData.chipTheme;
   AppBarTheme get _appBarTheme => _themeData.appBarTheme;
   ScrollbarThemeData get _scrollbarTheme => _themeData.scrollbarTheme;
   BottomAppBarTheme get _bottomAppBarTheme => _themeData.bottomAppBarTheme;
-  DialogTheme get _dialogTheme => _themeData.dialogTheme;
+  DialogThemeData get _dialogTheme => _themeData.dialogTheme;
   FloatingActionButtonThemeData get _floatingActionButtonTheme =>
       _themeData.floatingActionButtonTheme;
   NavigationRailThemeData get _navigationRailTheme =>
@@ -90,7 +89,6 @@ extension Themes on BuildContext {
   PopupMenuThemeData get _popupMenuTheme => _themeData.popupMenuTheme;
   MaterialBannerThemeData get _bannerTheme => _themeData.bannerTheme;
   DividerThemeData get _dividerTheme => _themeData.dividerTheme;
-  ButtonBarThemeData get _buttonBarTheme => _themeData.buttonBarTheme;
   BottomNavigationBarThemeData get _bottomNavigationBarTheme =>
       _themeData.bottomNavigationBarTheme;
   TimePickerThemeData get _timePickerTheme => _themeData.timePickerTheme;
@@ -154,7 +152,6 @@ class _Themes {
     required this.popupMenu,
     required this.banner,
     required this.divider,
-    required this.buttonBar,
     required this.bottomNavigationBar,
     required this.timePicker,
     required this.textButton,
@@ -209,13 +206,13 @@ class _Themes {
   final SliderThemeData slider;
 
   /// See [ThemeData.tabBarTheme].
-  final TabBarTheme tabBar;
+  final TabBarThemeData tabBar;
 
   /// See [ThemeData.tooltipTheme].
   final TooltipThemeData tooltip;
 
   /// See [ThemeData.cardTheme].
-  final CardTheme card;
+  final CardThemeData card;
 
   /// See [ThemeData.chipTheme].
   final ChipThemeData chip;
@@ -230,7 +227,7 @@ class _Themes {
   final BottomAppBarTheme bottomAppBar;
 
   /// See [ThemeData.dialogTheme].
-  final DialogTheme dialog;
+  final DialogThemeData dialog;
 
   /// See [ThemeData.floatingActionButtonTheme].
   final FloatingActionButtonThemeData floatingActionButton;
@@ -255,9 +252,6 @@ class _Themes {
 
   /// See [ThemeData.dividerTheme].
   final DividerThemeData divider;
-
-  /// See [ThemeData.buttonBarTheme].
-  final ButtonBarThemeData buttonBar;
 
   /// See [ThemeData.bottomNavigationBarTheme].
   final BottomNavigationBarThemeData bottomNavigationBar;
