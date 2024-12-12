@@ -4,7 +4,7 @@
 /// the hostname of the computer, the value of environment variables,
 /// the path to the running program,
 /// and other global properties of the program being run.
-class Platform {
+abstract final class Platform {
   /// Whether the program is running in the web browser
   static const isWeb = true;
 
