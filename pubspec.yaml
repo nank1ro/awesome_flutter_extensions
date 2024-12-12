@@ -3,7 +3,7 @@ description: >
   A Flutter Extension to remove boilerplate when accessing
   ancestor context properties
 version: 1.3.0
-homepage: https://bestofcode.dev
+homepage: https://mariuti.com
 repository: https://github.com/nank1ro/awesome_flutter_extensions
 
 environment:
