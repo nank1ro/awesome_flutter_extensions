@@ -1,3 +1,5 @@
+[![Pub](https://img.shields.io/pub/v/awesome_flutter_extensions.svg)](https://pub.dev/packages/awesome_flutter_extensions)
+
 # Awesome Flutter Extensions
 
 <img src="https://raw.githubusercontent.com/nank1ro/awesome_flutter_extensions/main/assets/images/header.svg" height="400">
