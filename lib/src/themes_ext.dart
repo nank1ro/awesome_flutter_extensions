@@ -66,7 +66,7 @@ extension Themes on BuildContext {
       _themeData.toggleButtonsTheme;
   TextTheme get _primaryTextTheme => _themeData.primaryTextTheme;
   IconThemeData get _iconTheme => _themeData.iconTheme;
-  InputDecorationTheme get _inputDecorationTheme =>
+  InputDecorationThemeData get _inputDecorationTheme =>
       _themeData.inputDecorationTheme;
   IconThemeData get _primaryIconTheme => _themeData.primaryIconTheme;
   SliderThemeData get _sliderTheme => _themeData.sliderTheme;
@@ -74,9 +74,9 @@ extension Themes on BuildContext {
   TooltipThemeData get _tooltipTheme => _themeData.tooltipTheme;
   CardThemeData get _cardTheme => _themeData.cardTheme;
   ChipThemeData get _chipTheme => _themeData.chipTheme;
-  AppBarTheme get _appBarTheme => _themeData.appBarTheme;
+  AppBarThemeData get _appBarTheme => _themeData.appBarTheme;
   ScrollbarThemeData get _scrollbarTheme => _themeData.scrollbarTheme;
-  BottomAppBarTheme get _bottomAppBarTheme => _themeData.bottomAppBarTheme;
+  BottomAppBarThemeData get _bottomAppBarTheme => _themeData.bottomAppBarTheme;
   DialogThemeData get _dialogTheme => _themeData.dialogTheme;
   FloatingActionButtonThemeData get _floatingActionButtonTheme =>
       _themeData.floatingActionButtonTheme;
@@ -194,7 +194,7 @@ class _Themes {
   final TextTheme primaryText;
 
   /// See [ThemeData.inputDecorationTheme].
-  final InputDecorationTheme inputDecoration;
+  final InputDecorationThemeData inputDecoration;
 
   /// See [ThemeData.iconTheme].
   final IconThemeData icon;
@@ -218,13 +218,13 @@ class _Themes {
   final ChipThemeData chip;
 
   /// See [ThemeData.appBarTheme].
-  final AppBarTheme appBar;
+  final AppBarThemeData appBar;
 
   /// See [ThemeData.scrollbarTheme].
   final ScrollbarThemeData scrollbar;
 
   /// See [ThemeData.bottomAppBarTheme].
-  final BottomAppBarTheme bottomAppBar;
+  final BottomAppBarThemeData bottomAppBar;
 
   /// See [ThemeData.dialogTheme].
   final DialogThemeData dialog;
