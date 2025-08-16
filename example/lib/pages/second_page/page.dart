@@ -11,13 +11,13 @@ class SecondPage extends StatelessWidget {
         title: Text(
           'Second page',
           style: context.textStyles.titleLarge.bold.copyWith(
-            color: context.colors.scheme.onPrimary,
+            color: context.colors.scheme.onSurface,
           ),
         ),
         leading: IconButton(
           icon: Icon(
             Icons.arrow_back,
-            color: context.colors.scheme.onPrimary,
+            color: context.colors.scheme.onSurface,
           ),
           onPressed: () => context.navigator.pop(),
         ),

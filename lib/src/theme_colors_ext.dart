@@ -19,7 +19,9 @@ extension ThemeColors on BuildContext {
         unselectedWidget: _unselectedWidgetColor,
         disabled: _disabledColor,
         secondaryHeader: _secondaryHeaderColor,
+        // ignore: deprecated_member_use_from_same_package
         dialogBackground: _dialogBackgroundColor,
+        // ignore: deprecated_member_use_from_same_package
         indicator: _indicatorColor,
         hint: _hintColor,
         scheme: _colorScheme,
@@ -47,7 +49,15 @@ extension ThemeColors on BuildContext {
   Color get _splashColor => _theme.splashColor;
   Color get _unselectedWidgetColor => _theme.unselectedWidgetColor;
   Color get _disabledColor => _theme.disabledColor;
+  @Deprecated(
+    'Use DialogThemeData.backgroundColor instead. '
+    'This feature was deprecated after v3.27.0-0.1.pre.',
+  )
   Color get _dialogBackgroundColor => _theme.dialogBackgroundColor;
+  @Deprecated(
+    'Use TabBarThemeData.indicatorColor instead. '
+    'This feature was deprecated after v3.28.0-1.0.pre.',
+  )
   Color get _indicatorColor => _theme.indicatorColor;
   Color get _hintColor => _theme.hintColor;
   Color get _shadowColor => _theme.shadowColor;
@@ -123,9 +133,11 @@ class _ThemeColors {
   /// See [ThemeData.secondaryHeaderColor].
   final Color secondaryHeader;
 
+  // ignore: deprecated_member_use
   /// See [ThemeData.dialogBackgroundColor].
   final Color dialogBackground;
 
+  // ignore: deprecated_member_use
   /// See [ThemeData.indicatorColor].
   final Color indicator;
 

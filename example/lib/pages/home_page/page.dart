@@ -37,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(
           widget.title,
           style: context.textStyles.titleLarge.bold.copyWith(
-            color: context.colors.scheme.onPrimary,
+            color: context.colors.scheme.onSurface,
           ),
         ),
       ),

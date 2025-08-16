@@ -1,3 +1,7 @@
+## 1.3.1
+
+- **FIX**: Breaking changes introduced by Flutter 3.35 which renamed `InputDecorationTheme` into `InputDecorationThemeData`,  `AppBarTheme` into `AppBarThemeData`, and `BottomAppBarTheme` into `BottomAppBarThemeData` (thanks to @milesegan).
+
 ## 1.3.0
 
 - **FIX**: Breaking changes introduced by Flutter 3.27.0
