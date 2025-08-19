@@ -1,3 +1,7 @@
+## 2.0.1
+
+- **CHORE**: Set min Flutter SDK version to 3.35.0.
+
 ## 2.0.0
 
 - **BREAKING CHANGE**: Breaking changes introduced by Flutter 3.35 which renamed `InputDecorationTheme` into `InputDecorationThemeData`,  `AppBarTheme` into `AppBarThemeData`, and `BottomAppBarTheme` into `BottomAppBarThemeData` (thanks to @milesegan).
