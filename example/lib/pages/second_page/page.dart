@@ -1,5 +1,5 @@
 import 'package:awesome_flutter_extensions/awesome_flutter_extensions.dart';
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 class SecondPage extends StatelessWidget {
   const SecondPage({Key? key}) : super(key: key);

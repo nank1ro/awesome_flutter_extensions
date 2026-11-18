@@ -18,7 +18,7 @@ flutter pub add awesome_flutter_extensions
 
 ```yaml
 dependencies:
-  awesome_flutter_extensions: ^1.0.0 # Use the latest version from pub.dev
+  awesome_flutter_extensions: ^3.0.0 # Use the latest version from pub.dev
 ```
 
 3. Install using **Pubspec Assist** (VSCode extensions):

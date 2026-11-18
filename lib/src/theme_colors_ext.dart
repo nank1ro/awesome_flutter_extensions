@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// Helper extension that allows to use a color like:
 /// `context.colors.primary`
