@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'dart:developer' as devtools show log;
 
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 
 /// DevTools extensions
 extension DevTools on Object {

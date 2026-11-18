@@ -1,3 +1,8 @@
+## 3.0.0
+
+- **BREAKING CHANGE**: The extensions now read `Theme`, localizations and navigation from `package:material_ui` and `package:cupertino_ui` instead of the deprecated `package:flutter/material.dart` and `package:flutter/cupertino.dart`. Apps must use `material_ui` for `context.theme`, `context.colorScheme` and the other theme extensions to find their `Theme`.
+- **BREAKING CHANGE**: Set min Flutter SDK version to 3.47.0 and min Dart SDK version to 3.13.0.
+
 ## 2.0.1
 
 - **CHORE**: Set min Flutter SDK version to 3.35.0.
